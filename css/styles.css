@@ -114,6 +114,10 @@ header {
     transform-origin: top;
 }
 
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
 .header .search-form input {
     width: 100%;
     height: 100%;
@@ -142,6 +146,10 @@ header {
     width: 35rem;
     background: #fff;
     padding: 0 1.5rem;
+}
+
+.header .cart-items-container.active {
+    right: 0;
 }
 
 .header .cart-items-container .cart-items {
@@ -225,7 +233,7 @@ header {
     }
 }
 
-@media (max-width: 991px){
+@media (max-width: 768px){
     #menu-btn {
         display: inline-block;
     }
@@ -237,6 +245,9 @@ header {
         width: 30rem;
         height: calc(100vh - 9.5rem);
     }
+    .header .navbar.active {
+        right: 0;
+    }
     .header .navbar a {
         color: var(--black);
         display: block;
@@ -244,4 +255,15 @@ header {
         padding: .5rem;
         font-size: 2rem;
     }
+    .header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+}
+
+@media (max-width: 450px){
+    html {
+        font-size: 50%;
+    }
+
 }
